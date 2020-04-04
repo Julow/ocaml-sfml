@@ -72,7 +72,6 @@ let flipVertically   ~image = flipVertically ~image:image.u
 
 
 let destroy img =
-  Printf.printf "# destroying image (%s)...\n%!" img.s;
   destroy img.u
 
 let createFromFile ~filename =

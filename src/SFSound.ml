@@ -39,7 +39,6 @@ external getAttenuation: sound:u -> float = "caml_sfSound_getAttenuation"
 type t = { u:u; mutable buf:SFSoundBuffer.t option; s:string }
 
 let destroy sound =
-  Printf.printf "# destroying sound (%s)...\n%!" sound.s;
   destroy sound.u
 
 let create () =
