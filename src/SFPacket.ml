@@ -6,7 +6,6 @@ external destroy: u -> unit = "caml_sfPacket_destroy"
 external copy: packet:u -> u = "caml_sfPacket_copy"
 
 let destroy packet =
-  Printf.printf "# destroying packet (%s)...\n%!" packet.s;
   destroy packet.u
 
 let create () =

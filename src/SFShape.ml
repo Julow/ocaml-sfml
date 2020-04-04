@@ -30,7 +30,6 @@ external getPointCount: shape:u -> int = "caml_sfShape_getPointCount"
 type t = { u:u; s:string }
 
 let destroy shape =
-  Printf.printf "# destroying shape (%s)...\n%!" shape.s;
   destroy shape.u
 
 let create pts =

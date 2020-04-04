@@ -15,7 +15,6 @@ external destroy: u -> unit = "caml_sfRenderStates_destroy"
 type t = { u:u; s:string }
 
 let destroy states =
-  Printf.printf "# destroying renderStates (%s)...\n%!" states.s;
   destroy states.u
 
 let create ?blendMode ?transform ?texture ?shader () =

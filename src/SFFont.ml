@@ -38,7 +38,6 @@ external getInfo: u -> info = "caml_sfFont_getInfo"
 type t = { u:u; s:string }
 
 let destroy font =
-  Printf.printf "# destroying font (%s)...\n%!" font.s;
   destroy font.u
 
 let createFromFile ~filename =

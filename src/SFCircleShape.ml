@@ -33,7 +33,6 @@ external setOutlineThickness: circle:u -> thickness:float -> unit
 type t = { u:u; s:string }
 
 let destroy circle =
-  Printf.printf "# destroying circle (%s)...\n%!" circle.s;
   destroy circle.u
 
 let create ?radius ?pointCount () =
